@@ -1,12 +1,14 @@
 <?php
-// array with names
-$a[] = "Deadmau5";
-$a[] = "Alesso";
-$a[] = "Marshmello";
-$a[] = "Afrojack";
+//Array with names
+$a[] = "Anna";
+$a[] = "Brittany";
+$a[] = "Cinderella";
+$a[] = "Diana";
+$a[] = "Eva";
+$a[] = "Fiona";
 
-// get the q parameter from URL
-$q = $_REQUEST["q"];
+//get the q parameter from URL
+$q = $_REQUEST	["q"];
 
 $hint = "";
 
@@ -14,17 +16,17 @@ $hint = "";
 if ($q !== ""){
 	$q = strtolower($q);
 	$len = strlen($q);
-	foreach($a as $name){
-			if(stristr($q, substr($name, 0, $len))) {
-				if($hint === ""){
-					$hint = $name;
-				} else {
-					$hint .= ", $name";
+	foreach ($a as $name) {
+		if (stristr($q, substr($name, 0, $len))){
+			if ($hint === ""){
+				$hint = $name;
+				}else{
+				$hint .=", $name";
 				}
 			}
+		}
 	}
-}
 
-//Output "no suggestion" if no hint was found o output correct values
-echo $hint == "" ? "no suggestion" : $hint;
+// Output "no suggestion" if no hint was found or output correct values
+echo $hint === "" ? "no suggestion" : $hint;
 ?>

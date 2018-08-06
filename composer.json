@@ -1,0 +1,13 @@
+{
+    "name": "asus/web",
+    "description": "project uas",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "bigboss edm",
+            "email": "reza17ti@mahasiswa.pcr.ac.id"
+        }
+    ],
+    "require": {}
+}
